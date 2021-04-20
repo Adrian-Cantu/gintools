@@ -123,7 +123,7 @@ break_connecting_source_paths <- function(red.sites, graph, bias){
         dplyr::filter(nt.dist == max(nt.dist)) %>%
         dplyr::filter(adj.abund == min(adj.abund)) %>%
         dplyr::mutate(
-          group_size = n(),
+          group_size = dplyr::n(),
           keep = ifelse(group_size == 1, TRUE, !is.upstream)) %>%
         dplyr::filter(keep) %>%
         dplyr::ungroup() %>%
@@ -153,7 +153,7 @@ break_connecting_source_paths <- function(red.sites, graph, bias){
         dplyr::filter(nt.dist == max(nt.dist)) %>%
         dplyr::filter(adj.abund == min(adj.abund)) %>%
         dplyr::mutate(
-          group_size = n(),
+          group_size = dplyr::n(),
           keep = ifelse(group_size == 1, TRUE, !is.downstream)) %>%
         dplyr::filter(keep) %>%
         dplyr::ungroup() %>%
