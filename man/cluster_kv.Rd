@@ -5,6 +5,8 @@
 \title{Cluster or group key - value(s) pairs}
 \usage{
 cluster_kv(key, val)
+
+cluster_kv(key, val, return = "standard")
 }
 \arguments{
 \item{key, val}{vector coercible into a factor vector. Both key and val 

@@ -89,7 +89,7 @@ resolve_cluster_sources <- function(red.sites, graph, bias){
           pos = GenomicRanges::start(red.sites[node])) %>%
         dplyr::group_by(clus, top.abund) %>%
         dplyr::mutate(
-          grp.size = n(),
+          grp.size = dplyr::n(),
           is.upstream = ifelse(strand == "+", pos == min(pos), pos == max(pos)),
           src = ifelse(
             top.abund == TRUE & grp.size > 1, is.upstream, top.abund)) %>%
@@ -110,7 +110,7 @@ resolve_cluster_sources <- function(red.sites, graph, bias){
           pos = GenomicRanges::start(red.sites[node])) %>%
         dplyr::group_by(clus, top.abund) %>%
         dplyr::mutate(
-          grp.size = n(),
+          grp.size = dplyr::n(),
           is.downstream = ifelse(
             strand == "+", pos == max(pos), pos == min(pos)),
           src = ifelse(

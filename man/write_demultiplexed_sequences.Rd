@@ -4,8 +4,14 @@
 \alias{write_demultiplexed_sequences}
 \title{Write demultiplexed sequences to fasta/q files in an output director}
 \usage{
-write_demultiplexed_sequences(read_file_path, multiplexed_data, out_folder,
-  type, read_name_pattern = "[\\\\w\\\\:\\\\-\\\\+]+", compress = TRUE)
+write_demultiplexed_sequences(
+  read_file_path,
+  multiplexed_data,
+  out_folder,
+  type,
+  read_name_pattern = "[\\\\w\\\\:\\\\-\\\\+]+",
+  compress = TRUE
+)
 }
 \arguments{
 \item{read_file_path}{path to sequence file (fasta/q) to be demultiplexed.}
