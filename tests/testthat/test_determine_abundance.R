@@ -59,6 +59,7 @@ test_that("Abundance data.frame from input GRanges", {
   res <- determine_abundance(input_gr)
   res <- as.data.frame(res, row.names = NULL)
   res$relAbund <- round(res$relAbund, digits = 2)
+  row.names(res) <- 1:length(row.names(res))
   expect_equal(res, output_df)
   
 })
